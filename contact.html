@@ -11,12 +11,12 @@
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="index.css" type="text/css" />
-    <!--   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
-    <!--<script type="text/javascript">-->
-    <!--    (function() {-->
-    <!--        emailjs.init("user_vanqZMkpPOADQP2iEpqKS");-->
-    <!--    })();-->
-    <!--</script>-->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_2j385GWnU4Y93dF31jX8q");
+            })();
+    </script>
     <title>Document</title>
 </head>
 <body>
@@ -54,13 +54,13 @@
         
     </header>
     <section>
-        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+        <form id="contactForm" onsubmit="return sendMail(this);" enctype="multipart/form-data">
   
   <div class="row">
       <div class="col-md-6 col-md-offset-1">
           <h3>Contact Me</h3>
             <label class="required" for="name">Your name:</label><br />
-            <input id="name" class="input" name="name" type="text" value="" size="50" /><br />
+            <input id="name" class="input" name="name" type="text" size="50" /><br />
             <span id="name_validation" class="error_message"></span>
       </div>
       
@@ -70,7 +70,7 @@
   <div class="row">
         <div class=" containerform col-md-6 col-md-offset-1">
             <label class="required" for="email">Your email:</label><br/>
-            <input id="email" class="input" name="email" type="text" value="" size="50" /><br />
+            <input id="email" class="input" name="email" type="text" size="50" /><br />
             <span id="email_validation" class="error_message"></span>
         </div>
         
@@ -120,6 +120,6 @@
 
 
   </footer>
-<!--<script src="assets/js/sendEmail.js"></script>-->
+<script src="js/sendEmail.js"></script>
 </body>
 </html>

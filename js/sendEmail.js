@@ -1,8 +1,8 @@
 function sendMail(contactForm) {
-    emailjs.sendcontactForm("gmail", "heritage", {
-        "name": contactForm.name.value,
-        "from_email_address": contactForm.email.value,
-        "message": contactForm.message.value
+    emailjs.send("gmail", "heritage", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.email.value,
+        "message": contactForm.message.value,
     })
     .then(
         function(response) {
