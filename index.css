@@ -129,7 +129,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-#contact_form {
+#contactForm {
     margin-left: 15px;
     text-align: center;
     
